@@ -1,0 +1,11 @@
+# sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+
+# residui di lavorazione: restano sul PC, non nel repository
+art/anteprime/
+00_FATTIBILITA_E_ROADMAP.md
+banco/
+strumenti/anteprime/

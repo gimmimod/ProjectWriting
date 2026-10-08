@@ -1,0 +1,95 @@
+/*  I suoni di Project Writing.
+ *
+ *  Non sono suoni nuovi: sono gli stessi eventi audio che il gioco usa gia' per
+ *  aprire un libro, sfogliare una pagina e annotare una mappa. Cambia una cosa
+ *  sola, ed e' il motivo per cui questo file esiste: la CATEGORIA.
+ *
+ *  I suoni del gioco stanno in `category = Player` e si fanno partire con
+ *  `character:playSoundLocal(...)`: partono dalla posizione del personaggio nel
+ *  mondo. Ogni finestra di questa mod pero' ferma il mondo, e a mondo fermo
+ *  quel canale non avanza: il rumore non arriva mai. Si sentiva il clic dei
+ *  tasti - che e' un suono d'interfaccia - e sembrava che il resto fosse muto.
+ *
+ *  Gli stessi eventi dichiarati in `category = UI` si fanno partire con
+ *  `getSoundManager():playUISound(...)`, che con la pausa non c'entra niente.
+ *  Il gioco non ne ha di equivalenti: il suo banco d'interfaccia e' fatto di
+ *  clic generici, niente pagina che gira.
+ *
+ *  NW_Sound sceglie da se' quale coppia usare: a mondo fermo questi, a mondo
+ *  che gira quelli di vanilla.
+ */
+
+module Base
+{
+    sound NW_PageFlip
+    {
+        category = UI,
+        clip
+        {
+            event = Character/Survival/Literature/Book/PageFlip,
+        }
+    }
+
+    sound NW_BookOpen
+    {
+        category = UI,
+        clip
+        {
+            event = Character/Survival/Literature/Book/Open,
+        }
+    }
+
+    sound NW_BookClose
+    {
+        category = UI,
+        clip
+        {
+            event = Character/Survival/Literature/Book/Close,
+        }
+    }
+
+    sound NW_MapOpen
+    {
+        category = UI,
+        clip
+        {
+            event = Character/Survival/Map/Open,
+        }
+    }
+
+    sound NW_MapClose
+    {
+        category = UI,
+        clip
+        {
+            event = Character/Survival/Map/Close,
+        }
+    }
+
+    sound NW_MapAddNote
+    {
+        category = UI,
+        clip
+        {
+            event = Character/Survival/Map/AddNote,
+        }
+    }
+
+    sound NW_MapAddSymbol
+    {
+        category = UI,
+        clip
+        {
+            event = Character/Survival/Map/AddSymbol,
+        }
+    }
+
+    sound NW_MapRemoveMarking
+    {
+        category = UI,
+        clip
+        {
+            event = Character/Survival/Map/RemoveMarking,
+        }
+    }
+}

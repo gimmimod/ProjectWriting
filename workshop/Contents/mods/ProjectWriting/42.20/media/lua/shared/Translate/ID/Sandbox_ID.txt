@@ -1,0 +1,9 @@
+Sandbox_ID = {
+	Sandbox_ProjectWriting = "Project Writing",
+	Sandbox_ProjectWriting_Freehand = "Menggambar bebas",
+	Sandbox_ProjectWriting_Freehand_tooltip = "Memungkinkan pemain menggambar bebas di peta dan halaman. Jika mati, alat gambar hilang di mana-mana: catatan, simbol, dan penghapus tetap berfungsi, dan goresan yang sudah ada tetap tersimpan. Berguna di server yang ramai, karena goresan adalah data terberat yang dikirim mod ini.",
+	Sandbox_ProjectWriting_VanillaMap = "Serahkan peta pada permainan, untuk semua",
+	Sandbox_ProjectWriting_VanillaMap_tooltip = "Peta dunia dan peta kertas terbuka dengan panel, tombol, dan fitur berbagi bawaan game untuk semua pemain, apa pun yang dipilih masing-masing di opsi mod. Paket simbol dan menulis di kertas tetap ada. Untuk server yang dibangun di sekitar peta vanilla.",
+	Sandbox_ProjectWriting_PageCharLimit = "Karakter per halaman",
+	Sandbox_ProjectWriting_PageCharLimit_tooltip = "Batas tulisan siapa pun di satu halaman buku catatan, buku harian, atau lembar. 0 menyerahkannya pada opsi mod masing-masing pemain. Berguna di server roleplay, tempat halaman yang sama dibaca di layar berbagai ukuran.",
+}

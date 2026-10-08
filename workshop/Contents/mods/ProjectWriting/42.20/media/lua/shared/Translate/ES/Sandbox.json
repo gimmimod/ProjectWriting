@@ -1,0 +1,9 @@
+{
+    "Sandbox_ProjectWriting": "Project Writing",
+    "Sandbox_ProjectWriting_Freehand": "Dibujo a mano alzada",
+    "Sandbox_ProjectWriting_Freehand_tooltip": "Permite a los jugadores dibujar a mano alzada en mapas y páginas. Desactivada, la herramienta de dibujo desaparece en todas partes: las notas, los símbolos y la goma siguen funcionando, y los trazos ya dibujados se conservan. Útil en servidores concurridos, donde los trazos son lo más pesado que envía este mod.",
+    "Sandbox_ProjectWriting_VanillaMap": "Dejar el mapa al juego, para todos",
+    "Sandbox_ProjectWriting_VanillaMap_tooltip": "El mapa del mundo y los mapas de papel se abren con los paneles, botones y el sistema para compartir del propio juego para todos los jugadores, sea cual sea lo que cada uno haya elegido en las opciones del mod. Se mantienen los paquetes de símbolos y la escritura en papel. Para servidores construidos en torno al mapa vanilla.",
+    "Sandbox_ProjectWriting_PageCharLimit": "Caracteres por página",
+    "Sandbox_ProjectWriting_PageCharLimit_tooltip": "Lo máximo que cualquiera puede escribir en una página de cuaderno, diario u hoja. 0 lo deja a las opciones del mod de cada jugador. Útil en servidores de rol, donde la misma página se lee en pantallas de todos los tamaños."
+}

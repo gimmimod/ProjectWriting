@@ -1,0 +1,9 @@
+Sandbox_NL = {
+	Sandbox_ProjectWriting = "Project Writing",
+	Sandbox_ProjectWriting_Freehand = "Uit de vrije hand tekenen",
+	Sandbox_ProjectWriting_Freehand_tooltip = "Laat spelers uit de vrije hand tekenen op kaarten en pagina's. Uit verdwijnt het tekengereedschap overal: notities, symbolen en de gum blijven werken, en al getekende lijnen blijven staan. Handig op drukke servers, waar lijnen het zwaarste zijn wat deze mod verstuurt.",
+	Sandbox_ProjectWriting_VanillaMap = "Laat de kaart aan het spel, voor iedereen",
+	Sandbox_ProjectWriting_VanillaMap_tooltip = "De wereldkaart en papieren kaarten openen voor alle spelers met de eigen panelen, knoppen en het delen van het spel, wat iedereen ook heeft ingesteld in de mod-opties. De symboolpakketten en schrijven op papier blijven. Voor servers die rond de vanilla-kaart zijn opgebouwd.",
+	Sandbox_ProjectWriting_PageCharLimit = "Tekens per pagina",
+	Sandbox_ProjectWriting_PageCharLimit_tooltip = "Het maximum dat iedereen op één pagina van een schrift, dagboek of vel kan schrijven. 0 laat het over aan de mod-opties van elke speler. Handig op roleplayservers, waar dezelfde pagina op schermen van elk formaat wordt gelezen.",
+}

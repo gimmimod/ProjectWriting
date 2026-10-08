@@ -1,0 +1,9 @@
+{
+    "Sandbox_ProjectWriting": "Project Writing",
+    "Sandbox_ProjectWriting_Freehand": "Szabadkézi rajzolás",
+    "Sandbox_ProjectWriting_Freehand_tooltip": "Lehetővé teszi a játékosoknak, hogy szabadkézzel rajzoljanak térképekre és oldalakra. Kikapcsolva a rajzeszköz mindenhonnan eltűnik: a jegyzetek, a szimbólumok és a radír továbbra is működnek, a már megrajzolt vonalak megmaradnak. Zsúfolt szervereken hasznos, ott a vonalak a legnehezebb adatok, amiket ez a mod küld.",
+    "Sandbox_ProjectWriting_VanillaMap": "Hagyd a térképet a játékra, mindenkinek",
+    "Sandbox_ProjectWriting_VanillaMap_tooltip": "A világtérkép és a papírtérképek minden játékosnak a játék saját paneljeivel, gombjaival és megosztásával nyílnak meg, bármit is állított be ki-ki a mod beállításaiban. A szimbólumcsomagok és a papírra írás megmaradnak. A vanilla térképre épülő szerverekhez.",
+    "Sandbox_ProjectWriting_PageCharLimit": "Karakter oldalanként",
+    "Sandbox_ProjectWriting_PageCharLimit_tooltip": "Legfeljebb ennyit írhat bárki egy füzet, napló vagy lap egy oldalára. A 0 minden játékos mod-beállításaira bízza. Szerepjátékos szervereken hasznos, ahol ugyanazt az oldalt mindenféle méretű képernyőn olvassák."
+}

@@ -1,0 +1,9 @@
+name=Project Writing
+id=ProjectWriting
+poster=poster.png
+icon=icon.png
+modversion=1.0.0 (STABLE)
+author=Gimmi
+versionMin=42.20
+loadModAfter=NeatUI_Framework,CleanUI,CleanHotBar,Neat_Rocco,MapLegendUI,AMMS_Standalone
+description=Project Writing: one panel for everything you write on - diaries, notebooks, sheets of paper, cards and every map - in your own handwriting. <LINE> Includes 141 extra map symbols: ExtraMapSymbols by Wipe, Lexx and B (Rotators), and Add More Map Symbols by Golem. Neither mod is required.

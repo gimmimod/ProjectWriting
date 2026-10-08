@@ -1,0 +1,9 @@
+Sandbox_PT = {
+	Sandbox_ProjectWriting = "Project Writing",
+	Sandbox_ProjectWriting_Freehand = "Desenho à mão livre",
+	Sandbox_ProjectWriting_Freehand_tooltip = "Permite aos jogadores desenhar à mão livre em mapas e páginas. Desligada, a ferramenta de desenho desaparece em todo o lado: notas, símbolos e borracha continuam a funcionar, e os traços já desenhados ficam. Útil em servidores cheios, onde os traços são o que este mod envia de mais pesado.",
+	Sandbox_ProjectWriting_VanillaMap = "Deixar o mapa ao jogo, para todos",
+	Sandbox_ProjectWriting_VanillaMap_tooltip = "O mapa do mundo e os mapas de papel abrem com os painéis, botões e partilha do próprio jogo para todos os jogadores, seja o que for que cada um escolheu nas opções do mod. Ficam os pacotes de símbolos e a escrita em papel. Para servidores construídos à volta do mapa vanilla.",
+	Sandbox_ProjectWriting_PageCharLimit = "Caracteres por página",
+	Sandbox_ProjectWriting_PageCharLimit_tooltip = "O máximo que qualquer um pode escrever numa página de caderno, diário ou folha. 0 deixa a decisão às opções do mod de cada jogador. Útil em servidores de roleplay, onde a mesma página é lida em ecrãs de todos os tamanhos.",
+}

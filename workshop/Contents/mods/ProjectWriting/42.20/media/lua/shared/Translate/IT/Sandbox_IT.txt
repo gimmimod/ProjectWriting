@@ -1,0 +1,9 @@
+Sandbox_IT = {
+	Sandbox_ProjectWriting = "Project Writing",
+	Sandbox_ProjectWriting_Freehand = "Disegno a mano libera",
+	Sandbox_ProjectWriting_Freehand_tooltip = "Permette ai giocatori di disegnare a mano libera su mappe e pagine. Spenta, la penna sparisce ovunque: note, simboli e gomma continuano a funzionare, e i tratti già disegnati restano. Utile sui server affollati, dove i tratti sono la cosa più pesante che questa mod invia.",
+	Sandbox_ProjectWriting_VanillaMap = "Lascia la mappa al gioco, per tutti",
+	Sandbox_ProjectWriting_VanillaMap_tooltip = "La mappa del mondo e le mappe di carta si aprono con pannelli, tasti e condivisione del gioco per tutti i giocatori, qualunque cosa ognuno abbia scelto nelle opzioni della mod. Restano i pacchetti di simboli e la scrittura su carta. Per i server costruiti attorno alla mappa vanilla.",
+	Sandbox_ProjectWriting_PageCharLimit = "Battute per pagina",
+	Sandbox_ProjectWriting_PageCharLimit_tooltip = "Il massimo che chiunque può scrivere su una pagina di quaderno, diario o foglio. 0 lascia decidere alle opzioni della mod di ogni giocatore. Utile sui server di gioco di ruolo, dove la stessa pagina si legge su schermi di ogni misura.",
+}

@@ -1,0 +1,9 @@
+{
+    "Sandbox_ProjectWriting": "Project Writing",
+    "Sandbox_ProjectWriting_Freehand": "Serbest çizim",
+    "Sandbox_ProjectWriting_Freehand_tooltip": "Oyuncuların haritalara ve sayfalara serbest çizim yapmasına izin verir. Kapalıyken çizim aracı her yerden kalkar: notlar, semboller ve silgi çalışmaya devam eder, önceden çizilmiş çizgiler kalır. Kalabalık sunucularda işe yarar; çizgiler bu modun gönderdiği en ağır veridir.",
+    "Sandbox_ProjectWriting_VanillaMap": "Haritayı oyuna bırak, herkes için",
+    "Sandbox_ProjectWriting_VanillaMap_tooltip": "Dünya haritası ve kâğıt haritalar, herkesin mod seçeneklerinde ne seçtiğinden bağımsız olarak tüm oyuncular için oyunun kendi panelleri, düğmeleri ve paylaşımıyla açılır. Sembol paketleri ve kâğıda yazma kalır. Vanilla harita üzerine kurulu sunucular için.",
+    "Sandbox_ProjectWriting_PageCharLimit": "Sayfa başına karakter",
+    "Sandbox_ProjectWriting_PageCharLimit_tooltip": "Herkesin bir defter, günlük ya da kâğıt sayfasına yazabileceği en fazla miktar. 0, kararı her oyuncunun mod seçeneklerine bırakır. Aynı sayfanın her boyutta ekranda okunduğu rol yapma sunucularında işe yarar."
+}

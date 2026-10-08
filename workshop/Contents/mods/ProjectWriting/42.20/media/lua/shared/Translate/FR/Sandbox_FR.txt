@@ -1,0 +1,9 @@
+Sandbox_FR = {
+	Sandbox_ProjectWriting = "Project Writing",
+	Sandbox_ProjectWriting_Freehand = "Dessin à main levée",
+	Sandbox_ProjectWriting_Freehand_tooltip = "Permet aux joueurs de dessiner à main levée sur les cartes et les pages. Désactivée, l'outil de dessin disparaît partout : les notes, les symboles et la gomme fonctionnent toujours, et les traits déjà tracés restent. Utile sur les serveurs chargés, où les traits sont ce que ce mod envoie de plus lourd.",
+	Sandbox_ProjectWriting_VanillaMap = "Laisser la carte au jeu, pour tout le monde",
+	Sandbox_ProjectWriting_VanillaMap_tooltip = "La carte du monde et les cartes papier s'ouvrent avec les panneaux, boutons et le partage du jeu pour tous les joueurs, quel que soit le réglage de chacun dans les options du mod. Les packs de symboles et l'écriture sur papier restent. Pour les serveurs construits autour de la carte vanilla.",
+	Sandbox_ProjectWriting_PageCharLimit = "Caractères par page",
+	Sandbox_ProjectWriting_PageCharLimit_tooltip = "Le maximum que quiconque peut écrire sur une page de cahier, de journal ou de feuille. 0 laisse le choix aux options du mod de chaque joueur. Utile sur les serveurs de jeu de rôle, où la même page est lue sur des écrans de toutes tailles.",
+}

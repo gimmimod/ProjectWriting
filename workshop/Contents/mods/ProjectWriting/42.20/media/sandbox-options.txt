@@ -1,0 +1,22 @@
+VERSION = 1,
+
+option ProjectWriting.Freehand
+{
+	type = boolean, default = true,
+	page = ProjectWriting,
+	translation = ProjectWriting_Freehand,
+}
+
+option ProjectWriting.PageCharLimit
+{
+	type = integer, min = 0, max = 6000, default = 0,
+	page = ProjectWriting,
+	translation = ProjectWriting_PageCharLimit,
+}
+
+option ProjectWriting.VanillaMap
+{
+	type = boolean, default = false,
+	page = ProjectWriting,
+	translation = ProjectWriting_VanillaMap,
+}

@@ -1,0 +1,9 @@
+Sandbox_DA = {
+	Sandbox_ProjectWriting = "Project Writing",
+	Sandbox_ProjectWriting_Freehand = "Frihåndstegning",
+	Sandbox_ProjectWriting_Freehand_tooltip = "Lader spillere tegne på frihånd på kort og sider. Slået fra forsvinder tegneværktøjet overalt: noter, symboler og viskelæder virker stadig, og allerede tegnede streger bliver. Nyttigt på travle servere, hvor streger er det tungeste, denne mod sender.",
+	Sandbox_ProjectWriting_VanillaMap = "Overlad kortet til spillet, for alle",
+	Sandbox_ProjectWriting_VanillaMap_tooltip = "Verdenskortet og papirkort åbnes med spillets egne paneler, knapper og deling for alle spillere, uanset hvad hver enkelt har valgt i mod-indstillingerne. Symbolpakkerne og skrivning på papir bliver. Til servere bygget op om vanilla-kortet.",
+	Sandbox_ProjectWriting_PageCharLimit = "Tegn pr. side",
+	Sandbox_ProjectWriting_PageCharLimit_tooltip = "Det meste, nogen kan skrive på én side i et hæfte, en dagbog eller et ark. 0 overlader det til hver spillers mod-indstillinger. Nyttigt på rollespilsservere, hvor den samme side læses på skærme i alle størrelser.",
+}

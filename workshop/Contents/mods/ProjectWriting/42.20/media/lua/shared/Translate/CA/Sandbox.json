@@ -1,0 +1,9 @@
+{
+    "Sandbox_ProjectWriting": "Project Writing",
+    "Sandbox_ProjectWriting_Freehand": "Dibuix a mà alçada",
+    "Sandbox_ProjectWriting_Freehand_tooltip": "Permet als jugadors dibuixar a mà alçada als mapes i a les pàgines. Desactivada, l'eina de dibuix desapareix arreu: les notes, els símbols i la goma continuen funcionant, i els traços ja dibuixats es queden. Útil als servidors concorreguts, on els traços són el que aquest mod envia de més pesat.",
+    "Sandbox_ProjectWriting_VanillaMap": "Deixa el mapa al joc, per a tothom",
+    "Sandbox_ProjectWriting_VanillaMap_tooltip": "El mapa del món i els mapes de paper s'obren amb els panells, botons i l'opció de compartir del joc per a tots els jugadors, sigui quina sigui l'opció que cadascú hagi triat al mod. Es mantenen els paquets de símbols i l'escriptura en paper. Per a servidors construïts al voltant del mapa vanilla.",
+    "Sandbox_ProjectWriting_PageCharLimit": "Caràcters per pàgina",
+    "Sandbox_ProjectWriting_PageCharLimit_tooltip": "El màxim que qualsevol pot escriure en una pàgina de quadern, diari o full. 0 ho deixa a les opcions del mod de cada jugador. Útil en servidors de rol, on la mateixa pàgina es llegeix en pantalles de totes les mides."
+}

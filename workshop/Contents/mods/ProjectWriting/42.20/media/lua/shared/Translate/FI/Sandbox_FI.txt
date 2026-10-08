@@ -1,0 +1,9 @@
+Sandbox_FI = {
+	Sandbox_ProjectWriting = "Project Writing",
+	Sandbox_ProjectWriting_Freehand = "Vapaakäsipiirto",
+	Sandbox_ProjectWriting_Freehand_tooltip = "Antaa pelaajien piirtää vapaalla kädellä karttoihin ja sivuille. Pois päältä piirtotyökalu katoaa kaikkialta: muistiinpanot, symbolit ja pyyhekumi toimivat yhä, ja jo piirretyt viivat säilyvät. Hyödyllinen vilkkailla palvelimilla, joilla viivat ovat raskain asia, jonka tämä modi lähettää.",
+	Sandbox_ProjectWriting_VanillaMap = "Jätä kartta pelille, kaikille",
+	Sandbox_ProjectWriting_VanillaMap_tooltip = "Maailmankartta ja paperikartat avautuvat kaikille pelaajille pelin omilla paneeleilla, painikkeilla ja jakamisella, riippumatta siitä, mitä kukin on valinnut modin asetuksista. Symbolipaketit ja paperille kirjoittaminen säilyvät. Vanilla-kartan ympärille rakennetuille palvelimille.",
+	Sandbox_ProjectWriting_PageCharLimit = "Merkkejä sivulla",
+	Sandbox_ProjectWriting_PageCharLimit_tooltip = "Enimmäismäärä, jonka kuka tahansa voi kirjoittaa vihon, päiväkirjan tai arkin sivulle. 0 jättää päätöksen kunkin pelaajan modiasetuksille. Hyödyllinen roolipelipalvelimilla, joilla samaa sivua luetaan kaikenkokoisilta näytöiltä.",
+}

@@ -1,0 +1,9 @@
+{
+    "Sandbox_ProjectWriting": "Project Writing",
+    "Sandbox_ProjectWriting_Freehand": "Freehand drawing",
+    "Sandbox_ProjectWriting_Freehand_tooltip": "Lets players draw freehand strokes on maps and pages. Off, the pen tool disappears everywhere: notes, symbols and the eraser still work, and strokes already drawn stay. Useful on busy servers, where strokes are the heaviest thing this mod sends.",
+    "Sandbox_ProjectWriting_VanillaMap": "Leave the map to the game, for everyone",
+    "Sandbox_ProjectWriting_VanillaMap_tooltip": "The world map and paper maps open with the game's own panels, buttons and sharing for every player, whatever each of them has set in the mod options. The symbol packs and writing on paper stay. For servers built around the vanilla map.",
+    "Sandbox_ProjectWriting_PageCharLimit": "Characters per page",
+    "Sandbox_ProjectWriting_PageCharLimit_tooltip": "The most anyone can write on one page of a notebook, diary or sheet. 0 leaves it to each player's mod options. Useful on roleplay servers, where the same page is read on screens of every size."
+}

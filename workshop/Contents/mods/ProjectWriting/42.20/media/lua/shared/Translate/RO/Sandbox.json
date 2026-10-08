@@ -1,0 +1,9 @@
+{
+    "Sandbox_ProjectWriting": "Project Writing",
+    "Sandbox_ProjectWriting_Freehand": "Desen cu mâna liberă",
+    "Sandbox_ProjectWriting_Freehand_tooltip": "Le permite jucătorilor să deseneze cu mâna liberă pe hărți și pagini. Oprită, unealta de desen dispare peste tot: notițele, simbolurile și guma funcționează în continuare, iar liniile deja desenate rămân. Util pe serverele aglomerate, unde liniile sunt cel mai greu lucru pe care îl trimite acest mod.",
+    "Sandbox_ProjectWriting_VanillaMap": "Lasă harta jocului, pentru toți",
+    "Sandbox_ProjectWriting_VanillaMap_tooltip": "Harta lumii și hărțile de hârtie se deschid cu panourile, butoanele și partajarea jocului pentru toți jucătorii, indiferent ce a ales fiecare în opțiunile modului. Pachetele de simboluri și scrisul pe hârtie rămân. Pentru serverele construite în jurul hărții vanilla.",
+    "Sandbox_ProjectWriting_PageCharLimit": "Caractere pe pagină",
+    "Sandbox_ProjectWriting_PageCharLimit_tooltip": "Cel mai mult cât poate scrie oricine pe o pagină de caiet, jurnal sau foaie. 0 lasă decizia opțiunilor modului fiecărui jucător. Util pe serverele de roleplay, unde aceeași pagină e citită pe ecrane de toate mărimile."
+}

@@ -1,0 +1,9 @@
+Sandbox_CN = {
+	Sandbox_ProjectWriting = "Project Writing",
+	Sandbox_ProjectWriting_Freehand = "手绘",
+	Sandbox_ProjectWriting_Freehand_tooltip = "允许玩家在地图和页面上手绘。关闭后，画笔工具在所有地方消失：笔记、符号和橡皮擦仍然可用，已画的笔画也会保留。适合人多的服务器，笔画是本模组发送的最重的数据。",
+	Sandbox_ProjectWriting_VanillaMap = "把地图交还给游戏（所有人）",
+	Sandbox_ProjectWriting_VanillaMap_tooltip = "所有玩家的世界地图和纸质地图都使用游戏自带的面板、按钮和共享功能，无论每个人在模组选项中如何设置。符号包和纸上书写保持不变。适用于围绕原版地图搭建的服务器。",
+	Sandbox_ProjectWriting_PageCharLimit = "每页字数",
+	Sandbox_ProjectWriting_PageCharLimit_tooltip = "任何人在笔记本、日记或纸张的一页上最多能写的字数。0 表示由每位玩家的模组选项决定。适用于角色扮演服务器，同一页会在各种尺寸的屏幕上阅读。",
+}

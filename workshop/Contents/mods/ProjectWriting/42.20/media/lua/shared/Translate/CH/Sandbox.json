@@ -1,0 +1,9 @@
+{
+    "Sandbox_ProjectWriting": "Project Writing",
+    "Sandbox_ProjectWriting_Freehand": "手繪",
+    "Sandbox_ProjectWriting_Freehand_tooltip": "允許玩家在地圖和頁面上手繪。關閉後，畫筆工具在所有地方消失：筆記、符號和橡皮擦仍然可用，已畫的筆畫也會保留。適合人多的伺服器，筆畫是本模組傳送的最重的資料。",
+    "Sandbox_ProjectWriting_VanillaMap": "地圖交還給遊戲（所有人）",
+    "Sandbox_ProjectWriting_VanillaMap_tooltip": "所有玩家的世界地圖和紙本地圖都使用遊戲內建的面板、按鈕和分享功能，無論每個人在模組選項中如何設定。符號包和紙上書寫保持不變。適用於圍繞原版地圖搭建的伺服器。",
+    "Sandbox_ProjectWriting_PageCharLimit": "每頁字數",
+    "Sandbox_ProjectWriting_PageCharLimit_tooltip": "任何人在筆記本、日記或紙張的一頁上最多能寫的字數。0 表示由每位玩家的模組選項決定。適用於角色扮演伺服器，同一頁會在各種尺寸的螢幕上閱讀。"
+}

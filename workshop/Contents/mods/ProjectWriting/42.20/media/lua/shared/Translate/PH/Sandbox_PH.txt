@@ -1,0 +1,9 @@
+Sandbox_PH = {
+	Sandbox_ProjectWriting = "Project Writing",
+	Sandbox_ProjectWriting_Freehand = "Malayang pagguhit",
+	Sandbox_ProjectWriting_Freehand_tooltip = "Pinapahintulutan ang mga manlalaro na gumuhit nang malaya sa mga mapa at pahina. Kung naka-off, nawawala ang panulat sa lahat ng lugar: ang mga tala, simbolo at pambura ay patuloy na gumagana, at naiiwan ang mga guhit na nauna. Makatutulong sa mga abalang server, kung saan ang mga guhit ay ang pinakabigat na datos na ipinapadala ng mod na ito.",
+	Sandbox_ProjectWriting_VanillaMap = "Ipaubaya ang mapa sa laro, para sa lahat",
+	Sandbox_ProjectWriting_VanillaMap_tooltip = "Ang mapa ng mundo at mga mapang papel ay bumubukas gamit ang mga panel, button at pagbabahagi ng laro para sa lahat ng manlalaro, anuman ang pinili ng bawat isa sa mga opsyon ng mod. Nananatili ang mga pakete ng simbolo at pagsulat sa papel. Para sa mga server na itinayo sa paligid ng vanilla na mapa.",
+	Sandbox_ProjectWriting_PageCharLimit = "Mga karakter bawat pahina",
+	Sandbox_ProjectWriting_PageCharLimit_tooltip = "Ang pinakamaraming maisusulat ng kahit sino sa isang pahina ng kuwaderno, talaarawan o papel. Ang 0 ay ipinauubaya sa opsyon ng mod ng bawat manlalaro. Kapaki-pakinabang sa mga roleplay server, kung saan binabasa ang parehong pahina sa iba't ibang laki ng screen.",
+}

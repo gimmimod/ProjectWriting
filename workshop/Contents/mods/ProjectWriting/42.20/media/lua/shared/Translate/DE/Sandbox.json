@@ -1,0 +1,9 @@
+{
+    "Sandbox_ProjectWriting": "Project Writing",
+    "Sandbox_ProjectWriting_Freehand": "Freihandzeichnen",
+    "Sandbox_ProjectWriting_Freehand_tooltip": "Erlaubt Spielern, auf Karten und Seiten freihand zu zeichnen. Aus verschwindet das Zeichenwerkzeug überall: Notizen, Symbole und Radiergummi funktionieren weiter, und bereits gezeichnete Striche bleiben. Nützlich auf vollen Servern, denn Striche sind das Schwerste, was diese Mod sendet.",
+    "Sandbox_ProjectWriting_VanillaMap": "Karte dem Spiel überlassen, für alle",
+    "Sandbox_ProjectWriting_VanillaMap_tooltip": "Weltkarte und Papierkarten öffnen sich für alle Spieler mit den Panels, Schaltflächen und dem Teilen des Spiels selbst, egal was jeder in den Mod-Optionen eingestellt hat. Die Symbolpakete und das Schreiben auf Papier bleiben. Für Server, die auf der Vanilla-Karte aufbauen.",
+    "Sandbox_ProjectWriting_PageCharLimit": "Zeichen pro Seite",
+    "Sandbox_ProjectWriting_PageCharLimit_tooltip": "Das Maximum, das jeder auf eine Seite eines Hefts, Tagebuchs oder Blatts schreiben kann. 0 überlässt es den Mod-Optionen jedes Spielers. Nützlich auf Rollenspielservern, wo dieselbe Seite auf Bildschirmen jeder Größe gelesen wird."
+}

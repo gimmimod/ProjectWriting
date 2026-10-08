@@ -1,0 +1,33 @@
+/*  Le due mappe che Project Writing sa fabbricare.
+ *
+ *  Sono oggetti mappa veri, non fogli con dentro dei dati: `ItemType = base:map`
+ *  e un `Map = <MapID>` che rimanda a una voce di `LootMaps.Init`. Il gioco
+ *  quindi le apre da se', con la sua finestra della mappa, e la nostra riga di
+ *  `LootMaps.Init` le taglia sull'area giusta leggendo i confini dalla modData
+ *  dell'oggetto (NW_Cartography). Un solo MapID per infinite mappe diverse: e'
+ *  l'oggetto a sapere che pezzo di mondo rappresenta, non lo script.
+ *
+ *    NW_AnnotatedMap  un ritaglio di mondo che un giocatore ha inquadrato e
+ *                     annotato, costato un foglio di carta e qualcosa per
+ *                     scrivere. Il nome se lo mette chi la fa.
+ *
+ *  Non va nel bottino: `Tags = base:ignorezombiedensity` come le mappe di
+ *  vanilla, ma non compare in nessuna distribuzione. Esiste solo perche'
+ *  qualcuno la fabbrica.
+ */
+
+module Base
+{
+    item NW_AnnotatedMap
+    {
+        DisplayCategory = Cartography,
+        ItemType = base:map,
+        Weight = 0.1,
+        Icon = Map,
+        Map = NW_AnnotatedMap,
+        StaticModel = MapInHand,
+        WorldStaticModel = Map,
+        Tags = base:ignorezombiedensity,
+    }
+
+}

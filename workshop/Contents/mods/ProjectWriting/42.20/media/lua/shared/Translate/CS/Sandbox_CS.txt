@@ -1,0 +1,9 @@
+Sandbox_CS = {
+	Sandbox_ProjectWriting = "Project Writing",
+	Sandbox_ProjectWriting_Freehand = "Kreslení od ruky",
+	Sandbox_ProjectWriting_Freehand_tooltip = "Umožní hráčům kreslit od ruky na mapy a stránky. Vypnuto zmizí nástroj kreslení všude: poznámky, symboly a guma dál fungují a už nakreslené tahy zůstanou. Hodí se na plných serverech, kde jsou tahy to nejtěžší, co tento mod posílá.",
+	Sandbox_ProjectWriting_VanillaMap = "Ponechat mapu hře, pro všechny",
+	Sandbox_ProjectWriting_VanillaMap_tooltip = "Mapa světa a papírové mapy se všem hráčům otevírají s panely, tlačítky a sdílením samotné hry, ať si kdokoli v nastavení modu zvolil cokoli. Balíčky symbolů a psaní na papír zůstávají. Pro servery postavené kolem vanilla mapy.",
+	Sandbox_ProjectWriting_PageCharLimit = "Znaků na stránku",
+	Sandbox_ProjectWriting_PageCharLimit_tooltip = "Nejvíc, co kdokoli může napsat na jednu stránku sešitu, deníku nebo listu. 0 to nechává na nastavení modu každého hráče. Hodí se na roleplay serverech, kde se stejná stránka čte na obrazovkách všech velikostí.",
+}

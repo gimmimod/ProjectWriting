@@ -1,0 +1,9 @@
+{
+    "Sandbox_ProjectWriting": "Project Writing",
+    "Sandbox_ProjectWriting_Freehand": "Rysowanie odręczne",
+    "Sandbox_ProjectWriting_Freehand_tooltip": "Pozwala graczom rysować odręcznie na mapach i stronach. Wyłączone – narzędzie rysowania znika wszędzie: notatki, symbole i gumka nadal działają, a narysowane już linie zostają. Przydatne na zatłoczonych serwerach, gdzie linie to najcięższe dane wysyłane przez ten mod.",
+    "Sandbox_ProjectWriting_VanillaMap": "Zostaw mapę grze, dla wszystkich",
+    "Sandbox_ProjectWriting_VanillaMap_tooltip": "Mapa świata i papierowe mapy otwierają się z panelami, przyciskami i udostępnianiem samej gry dla wszystkich graczy, niezależnie od tego, co każdy wybrał w opcjach moda. Zostają pakiety symboli i pisanie na papierze. Dla serwerów zbudowanych wokół mapy vanilla.",
+    "Sandbox_ProjectWriting_PageCharLimit": "Znaki na stronę",
+    "Sandbox_ProjectWriting_PageCharLimit_tooltip": "Najwięcej, ile każdy może napisać na jednej stronie zeszytu, pamiętnika lub kartki. 0 zostawia decyzję opcjom moda każdego gracza. Przydatne na serwerach RP, gdzie ta sama strona jest czytana na ekranach każdej wielkości."
+}

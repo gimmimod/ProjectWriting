@@ -1,0 +1,9 @@
+Sandbox_JP = {
+	Sandbox_ProjectWriting = "Project Writing",
+	Sandbox_ProjectWriting_Freehand = "手描き",
+	Sandbox_ProjectWriting_Freehand_tooltip = "マップやページへの手描きを許可します。オフにすると描画ツールがどこからも消えます。メモ、シンボル、消しゴムはそのまま使え、描いた線も残ります。混雑したサーバーで役立ちます。線はこのModが送るデータの中で最も重いものです。",
+	Sandbox_ProjectWriting_VanillaMap = "地図はゲームに任せる（全員）",
+	Sandbox_ProjectWriting_VanillaMap_tooltip = "ワールドマップと紙の地図は、各プレイヤーがModの設定で何を選んでいても、全員がゲーム本来のパネル、ボタン、共有機能で開きます。シンボルパックと紙への書き込みはそのまま残ります。バニラの地図を中心に作られたサーバー向けです。",
+	Sandbox_ProjectWriting_PageCharLimit = "1ページの文字数",
+	Sandbox_ProjectWriting_PageCharLimit_tooltip = "ノート、日記、紙の1ページに誰でも書ける最大の文字数。0にすると各プレイヤーのMod設定に任せます。同じページをさまざまなサイズの画面で読むロールプレイサーバーで役立ちます。",
+}
