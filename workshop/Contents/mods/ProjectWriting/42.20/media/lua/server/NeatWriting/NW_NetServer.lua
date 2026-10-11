@@ -142,10 +142,30 @@ end
 --- modalita' Steam, dove il nome utente e' quello dell'account. Chi ospita
 --- quindi non ha il ruolo, e il server gli rispondera' di no come a chiunque
 --- altro. Non e' un difetto di questo file. (lezione 54)
+---
+--- IL RUOLO SI GUARDA PER QUELLO CHE PUO' FARE, NON PER COME SI CHIAMA. Dalla
+--- 42.13 i livelli d'accesso sono ruoli (Roles), e un server ne crea di suoi
+--- con nomi suoi: `getAccessLevel()` restituisce solo il nome del ruolo. Prima
+--- valevano soltanto "admin" e "moderator" scritti cosi', e un admin con un
+--- ruolo chiamato in un altro modo non cancellava i tratti degli altri
+--- (segnalazione 1.0.0, partita ospitata). Vale la capacita' che il gioco
+--- stesso usa per le annotazioni altrui, EditMapSymbols (quella del comando
+--- /removemapsymbols), oppure i poteri da amministratore; il nome resta come
+--- ultima prova. I metodi si guardano prima di chiamarli: in Kahlua chiamare
+--- un nil e' un'eccezione che il pcall non ferma (lezione 33).
 local function isAdmin(player)
     if not player then return false end
+    local yes = false
+    pcall(function()
+        local role = player.getRole and player:getRole() or nil
+        if not role then return end
+        local cap = Capability and Capability.EditMapSymbols
+        if cap and role.hasCapability and role:hasCapability(cap) then yes = true end
+        if not yes and role.hasAdminPower and role:hasAdminPower() then yes = true end
+    end)
+    if yes then return true end
     local level
-    pcall(function() level = tostring(player:getAccessLevel()) end)
+    pcall(function() level = string.lower(tostring(player:getAccessLevel())) end)
     return level == "admin" or level == "moderator"
 end
 

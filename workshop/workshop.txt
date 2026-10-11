@@ -1,6 +1,6 @@
 version=1
 id=3796402502
-title=Project Writing [42.20]
+title=Project Writing [42.21]
 tags=Build 42;Interface;Language/Translation;Literature;Map;Multiplayer;Realistic;QoL
 visibility=public
 description=[h1]✒️ Project Writing[/h1]

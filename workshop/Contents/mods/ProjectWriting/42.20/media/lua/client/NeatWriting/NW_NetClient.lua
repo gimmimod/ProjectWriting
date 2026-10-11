@@ -115,13 +115,21 @@ function C.unshareStroke(player, stroke)
     send(N.C_REMOVE, { id = stroke.nwId })
 end
 
---- Quello che il server ci ha gia' detto di non poter togliere, e quando lo
---- abbiamo chiesto l'ultima volta.
+--- Quello che il server ci ha gia' detto di non poter togliere (e quando), e
+--- quando lo abbiamo chiesto l'ultima volta.
 local denied = {}
 local askedAt = {}
 
 --- Ogni quanto si puo' richiedere lo stesso tratto.
 local ASK_MS = 2000
+
+--- Quanto vale un rifiuto. NON PER SEMPRE: il permesso puo' cambiare a partita
+--- avviata - un admin che si da' il ruolo con /setaccesslevel, un capo che
+--- entra in fazione - e un rifiuto ricordato per tutta la sessione faceva
+--- sembrare la gomma rotta proprio a chi adesso il diritto l'aveva
+--- (segnalazione 1.0.0, partita ospitata: "non funziona mai, tranne sui miei").
+--- Scade dopo questo tempo, e comunque a ogni apertura della mappa del mondo.
+local DENY_MS = 30000
 
 --- Cancellare un tratto di un altro: si chiede, e risponde il server. Il
 --- permesso non lo decide questa meta' - qui non si sa niente di fazioni e di
@@ -133,16 +141,19 @@ local ASK_MS = 2000
 --- secondo per un gesto solo. Adesso un rifiuto si ricorda, e nel dubbio non si
 --- richiede piu' di una volta ogni due secondi.
 function C.removeRemote(id)
-    if not id or denied[id] then return end
+    if not id then return end
     local now = getTimestampMs and getTimestampMs() or 0
+    if denied[id] and now - denied[id] < DENY_MS then return end
     if askedAt[id] and now - askedAt[id] < ASK_MS then return end
     askedAt[id] = now
     send(N.C_REMOVE, { id = id })
 end
 
---- "Ho aperto la mappa del mondo, dammi quello che posso vedere."
+--- "Ho aperto la mappa del mondo, dammi quello che posso vedere." E i rifiuti
+--- di prima si dimenticano: il permesso potrebbe essere cambiato (DENY_MS).
 function C.requestSync()
     remote = {}
+    denied = {}
     send(N.C_SYNC, {})
 end
 
@@ -212,10 +223,11 @@ local function receive(command, args)
     elseif command == N.S_DONE then
         -- Niente da fare: la fine del pacchetto e' un segnale, non un dato.
     elseif command == N.S_DENY then
-        -- "Quello non lo puoi togliere": si segna e non si richiede piu'. Il
-        -- tratto resta sulla mappa, ed e' giusto che resti - non e' tuo.
+        -- "Quello non lo puoi togliere": si segna, e per un po' non si
+        -- richiede (DENY_MS). Il tratto resta sulla mappa, ed e' giusto che
+        -- resti - non e' tuo.
         if args and args.id then
-            denied[tostring(args.id)] = true
+            denied[tostring(args.id)] = getTimestampMs and getTimestampMs() or 0
             tell("negato: " .. tostring(args.id))
         end
     end

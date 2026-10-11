@@ -19,10 +19,18 @@
     pagava due volte.
 
     Quindi in rete la tabella sta in un file del client, in Zomboid/Lua, uno per
-    server e per personaggio, e nella modData resta solo `nwid`: pochi caratteri
-    che dicono quale file e' di questo personaggio. Quello che c'era nella
-    modData da una versione precedente passa nel file alla prima lettura, e la
-    modData si svuota con un'ultima spedizione.
+    personaggio, e nella modData resta solo `nwid`: pochi caratteri che dicono
+    quale file e' di questo personaggio. Quello che c'era nella modData da una
+    versione precedente passa nel file alla prima lettura, e la modData si
+    svuota con un'ultima spedizione.
+
+    IL FILE SI CHIAMA COL SOLO `nwid` (ProjectWriting_<nwid>.txt). Nella 1.0.0
+    davanti c'era anche l'indirizzo del server, e non aggiungeva niente: `nwid`
+    e' gia' unico (millisecondi, un numero a caso e il nome utente). Toglieva
+    invece qualcosa: lo stesso server raggiunto per nome invece che per numero,
+    o con l'indirizzo cambiato dal provider, dava un altro file, e il disegno
+    sembrava sparito. Il file col nome della 1.0.0 si cerca ancora, una volta,
+    e si ricopia sotto il nome nuovo.
 
     I TRATTI SPARTITI NON C'ENTRANO: quelli il server li tiene nel suo deposito
     (NW_NetServer, nella modData del mondo), e da li' tornano a chi li puo'
@@ -122,6 +130,8 @@ local function safeName(s)
     return (string.gsub(tostring(s or ""), "[^%w_%-]", "_"))
 end
 
+--- Il server come lo nominava la 1.0.0 nel nome del file: serve solo a
+--- ritrovare quei file (fileEntry).
 local function serverKey()
     local ip, port = "", ""
     pcall(function() ip = tostring(getServerIP() or "") end)
@@ -160,29 +170,113 @@ end
 
 local files = {}   -- [nome file] = { name = ..., data = tabella }
 
+-- `nwid` di ogni personaggio visto in questa sessione, per oggetto giocatore
+-- (un personaggio nuovo dopo la morte e' un altro oggetto, e un altro id).
+-- Se la modData lo perde a meta' partita - una copia rimandata dal server prima
+-- che la nostra spedizione arrivasse - si rimette questo invece di inventarne
+-- un secondo, che spezzerebbe il disegno in due file.
+local known = {}
+
 local function modData(player)
     local md
     pcall(function() md = player:getModData() end)
     return md
 end
 
+--[[ LA SPEDIZIONE ASPETTA CHE IL PERSONAGGIO SIA NEL MONDO.
+
+    IsoObject.transmitModData esce senza dire niente se il personaggio non ha
+    ancora una casella (`square`, letto nel bytecode), e la casella arriva al
+    suo primo aggiornamento dopo che la mappa intorno e' stata costruita - cioe'
+    DOPO OnCreatePlayer (lezione 78). Ed e' proprio in OnCreatePlayer che
+    NW_Media chiede la tabella per la prima volta: un `nwid` nato li' restava
+    solo sul client, al rientro il server non lo conosceva e ne nasceva un
+    altro, con un file vuoto - il disegno sembrava sparito.
+
+    Quindi, senza casella, la spedizione si segna e parte da OnTick appena la
+    casella c'e' da due fotogrammi (il primo e' quello in cui il motore la
+    copia in `square`). Senza niente in attesa OnTick guarda una tabella vuota.
+]]
+local waiting = {}   -- [giocatore] = fotogrammi passati con la casella
+
+local function hasSquare(player)
+    local sq
+    pcall(function() sq = player:getCurrentSquare() end)
+    return sq ~= nil
+end
+
 local function transmit(player)
-    pcall(function() player:transmitModData() end)
+    if hasSquare(player) then
+        pcall(function() player:transmitModData() end)
+        waiting[player] = nil
+    else
+        waiting[player] = 0
+    end
+end
+
+--- Prima si guarda, poi si cambia: le tabelle di Kahlua sono mappe Java, e
+--- toccarne le chiavi mentre le si scorre non e' una cosa da fare.
+local function sendWaiting()
+    local ready, later = nil, nil
+    for player, ticks in pairs(waiting) do
+        if hasSquare(player) then
+            if ticks >= 1 then
+                ready = ready or {}
+                ready[#ready + 1] = player
+            else
+                later = later or {}
+                later[#later + 1] = player
+            end
+        end
+    end
+    for _, player in ipairs(later or {}) do waiting[player] = 1 end
+    for _, player in ipairs(ready or {}) do
+        waiting[player] = nil
+        pcall(function() player:transmitModData() end)
+    end
+end
+
+Events.OnTick.Add(sendWaiting)
+
+--- Vero se la tabella non ha nemmeno una chiave.
+---
+--- NON CON `next`, CHE IN KAHLUA NON ESISTE. Le funzioni di base del gioco
+--- sono quelle della BaseLib di Kahlua piu' lo stdlib.lua nella cartella di
+--- installazione, e `next` non sta in nessuna delle due (lezione 79). Con
+--- `next` qui, la 1.0.0 dava "Object tried to call nil in root" alla prima
+--- apertura della mappa del mondo in rete; da soli questa riga non si
+--- raggiunge mai, ed e' per questo che in prova non si era visto.
+local function isEmpty(t)
+    for _ in pairs(t) do return false end
+    return true
 end
 
 --- In rete: il file del personaggio, letto e migrato alla prima richiesta.
 local function fileEntry(player, md)
     if type(md.nwid) ~= "string" or md.nwid == "" then
-        local name = "x"
-        pcall(function() name = player:getUsername() or name end)
-        md.nwid = safeName(tostring(getTimestampMs()) .. "_" .. tostring(ZombRand(1000000)) .. "_" .. name)
+        local id = known[player]
+        if not id then
+            local name = "x"
+            pcall(function() name = player:getUsername() or name end)
+            id = safeName(tostring(getTimestampMs()) .. "_" .. tostring(ZombRand(1000000)) .. "_" .. name)
+        end
+        md.nwid = id
         transmit(player)
     end
-    local fileName = FILE_PREFIX .. serverKey() .. "_" .. md.nwid .. ".txt"
+    known[player] = md.nwid
+
+    local fileName = FILE_PREFIX .. md.nwid .. ".txt"
     local entry = files[fileName]
     if entry then return entry end
 
-    entry = { name = fileName, data = readFile(fileName) or {} }
+    local data = readFile(fileName)
+    if not data then
+        -- Il nome della 1.0.0, con l'indirizzo del server davanti: se c'e', si
+        -- ricopia sotto il nome nuovo e da li' in poi vale quello.
+        data = readFile(FILE_PREFIX .. serverKey() .. "_" .. md.nwid .. ".txt")
+        if data then writeFile(fileName, data) end
+    end
+    entry = { name = fileName, data = data or {} }
     files[fileName] = entry
 
     -- Quello che una versione precedente aveva lasciato nella modData: nel
@@ -209,7 +303,7 @@ function S.root(player, create)
 
     if isClient() then
         local entry = fileEntry(player, md)
-        if entry.data.v == nil and not create and next(entry.data) == nil then return nil end
+        if not create and entry.data.v == nil and isEmpty(entry.data) then return nil end
         return entry.data
     end
 
